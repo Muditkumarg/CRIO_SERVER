@@ -7,10 +7,7 @@ let employee_router = require("./Routes/Employee_route");
 let app = express();
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://hospital-crio-ant394wp2-crio4.vercel.app",
-    ],
+    origin: ["http://localhost:5173", "https://hospital-crio.vercel.app"],
     credentials: true,
   }),
 );
