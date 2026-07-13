@@ -116,6 +116,7 @@ let Login = async (req, res) => {
       success: false,
       message: "something went wrong",
     });
+    console.log(error);
   }
 };
 
