@@ -5,7 +5,15 @@ let mongoose = require("./Database/db");
 let employee_router = require("./Routes/Employee_route");
 
 let app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://hospital-crio-ant394wp2-crio4.vercel.app",
+    ],
+    credentials: true,
+  }),
+);
 app.use(express.json());
 
 app.use((req, res, next) => {
